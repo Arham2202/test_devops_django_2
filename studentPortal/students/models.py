@@ -5,5 +5,3 @@ class students(models.Model):
     name = models.CharField(max_length=99)
     mobile = models.CharField(max_length=10)
     email = models.CharField(max_length=99)
-    
-    file = models.FileField(upload_to='media/', null=True, blank=True)
