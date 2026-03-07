@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from students.models import TableOne
 
-def  home(request):
+def  registration(request):
     user_data = TableOne.objects.all() # SELECT * FROM TableOne
     if request.method == 'POST':
         name = request.POST.get('name')
@@ -13,4 +13,8 @@ def  home(request):
         TableOne.objects.create(name= name, mobile= mobile, email= email, file= file)
         return redirect("/")
 
-    return render(request, 'profile.html', {'data': user_data})
+    return render(request, 'registration.html', {'data': user_data})
+
+def studentlist(request):
+    students = students.objects.all()
+    return render(request, 'studentlist.html', {'students': students})
