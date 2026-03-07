@@ -13,4 +13,4 @@ def  home(request):
         TableOne.objects.create(name= name, mobile= mobile, email= email, file= file)
         return redirect("/")
 
-    return render(request, 'home.html', {'data': user_data})
+    return render(request, 'profile.html', {'data': user_data})
