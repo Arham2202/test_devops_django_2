@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Add Expense</h2>
+
+<form method="post">
+{% csrf_token %}
+
+Title <input type="text" name="title"><br><br>
+
+Category
+<select name="category">
+<option>Food</option>
+<option>Travel</option>
+<option>Bills</option>
+<option>Shopping</option>
+</select>
+
+<br><br>
+
+Amount <input type="number" name="amount"><br><br>
+
+Date <input type="date" name="date"><br><br>
+
+<button type="submit">Add Expense</button>
+
+</form>
+</body>
+</html>

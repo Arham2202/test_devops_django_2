@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+<a href="/add_expense/">Add Expense</a>
+<a href="/add_income/">Add Income</a>
+<a href="/logout/">Logout</a>
+
+<h2>Total Income: {{total_income}}</h2>
+<h2>Total Expense: {{total_expense}}</h2>
+<h2>Balance: {{balance}}</h2>
+
+<h3>Expenses</h3>
+
+<table border="1">
+
+<tr>
+<th>Title</th>
+<th>Category</th>
+<th>Amount</th>
+<th>Date</th>
+<th>Action</th>
+</tr>
+
+{% for e in expenses %}
+
+<tr>
+<td>{{e.title}}</td>
+<td>{{e.category}}</td>
+<td>{{e.amount}}</td>
+<td>{{e.date}}</td>
+
+<td>
+<a href="/delete_expense/{{e.id}}/">Delete</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+</body>
+</html>
