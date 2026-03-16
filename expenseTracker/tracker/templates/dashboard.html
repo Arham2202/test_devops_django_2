@@ -6,19 +6,41 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
+<center>
 
-<a href="/add_expense/">Add Expense</a>
-<a href="/add_income/">Add Income</a>
+<h1>Personal Expense Tracker Dashboard</h1>
+
+<hr width="600">
+
+<a href="/add_expense/">Add Expense</a> |
+<a href="/add_income/">Add Income</a> |
 <a href="/logout/">Logout</a>
 
-<h2>Total Income: {{total_income}}</h2>
-<h2>Total Expense: {{total_expense}}</h2>
-<h2>Balance: {{balance}}</h2>
+<br><br>
 
-<h3>Expenses</h3>
+<h2>Financial Summary</h2>
 
-<table border="1">
+<table border="1" cellpadding="10">
+
+<tr>
+<th>Total Income</th>
+<th>Total Expense</th>
+<th>Balance</th>
+</tr>
+
+<tr>
+<td>{{total_income}}</td>
+<td>{{total_expense}}</td>
+<td>{{balance}}</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<h2>Expense List</h2>
+
+<table border="1" cellpadding="10">
 
 <tr>
 <th>Title</th>
@@ -45,5 +67,7 @@
 {% endfor %}
 
 </table>
+
+</center>
 </body>
 </html>

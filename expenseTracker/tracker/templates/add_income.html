@@ -6,19 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Add Income</h2>
+    <center>
+
+<h1>Expense Tracker</h1>
+<hr width="400">
+
+<h2>Add Income</h2>
 
 <form method="POST">
 {% csrf_token %}
 
-Source <input type="text" name="source"><br><br>
+<table>
 
-Amount <input type="number" name="amount"><br><br>
+<tr>
+<td>Source:</td>
+<td><input type="text" name="source"></td>
+</tr>
 
-Date <input type="date" name="date"><br><br>
+<tr>
+<td>Amount:</td>
+<td><input type="number" name="amount"></td>
+</tr>
 
+<tr>
+<td>Date:</td>
+<td><input type="date" name="date"></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<br>
 <button type="submit">Add Income</button>
+</td>
+</tr>
+
+</table>
 
 </form>
+
+<br>
+
+<a href="/dashboard/">Back to Dashboard</a>
+
+</center>
 </body>
 </html>

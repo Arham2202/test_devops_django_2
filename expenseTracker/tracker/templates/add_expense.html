@@ -6,29 +6,60 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Add Expense</h2>
+   <center>
 
-<form method="post">
+<h1>Expense Tracker</h1>
+<hr width="400">
+
+<h2>Add Expense</h2>
+
+<form method="POST">
 {% csrf_token %}
 
-Title <input type="text" name="title"><br><br>
+<table>
 
-Category
+<tr>
+<td>Title:</td>
+<td><input type="text" name="title"></td>
+</tr>
+
+<tr>
+<td>Category:</td>
+<td>
 <select name="category">
 <option>Food</option>
 <option>Travel</option>
 <option>Bills</option>
 <option>Shopping</option>
 </select>
+</td>
+</tr>
 
-<br><br>
+<tr>
+<td>Amount:</td>
+<td><input type="number" name="amount"></td>
+</tr>
 
-Amount <input type="number" name="amount"><br><br>
+<tr>
+<td>Date:</td>
+<td><input type="date" name="date"></td>
+</tr>
 
-Date <input type="date" name="date"><br><br>
-
+<tr>
+<td colspan="2" align="center">
+<br>
 <button type="submit">Add Expense</button>
+</td>
+</tr>
+
+</table>
 
 </form>
+
+<br>
+
+<a href="/dashboard/">Back to Dashboard</a>
+
+</center>
 </body>
 </html>
